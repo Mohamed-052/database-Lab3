@@ -1,30 +1,24 @@
 # 📚 Library Management Portal (Database Systems Lab 3)
 
-A full-stack web application built for Database Systems Lab 3, featuring a Python Flask backend, a relational MySQL database, file upload handling, and a modern responsive user interface with synchronized Light/Dark mode.
+A complete full-stack database and web application built for **Database Systems Lab 3**, structured into database schema design and queries (Part 1) and a Python Flask web application featuring file uploads, complete CRUD operations, and synchronized Light/Dark mode (Part 2).
 
 ---
 
-## 🚀 Features
+## 📂 Project Directory Structure
 
-- **Full CRUD Operations**: Add books and authors, view records dynamically, and delete entries.
-- **Relational Database Integration**: Uses MySQL with foreign key relationships (`ON DELETE CASCADE`) to manage authors and their respective books seamlessly.
-- **File Upload Support**: Securely uploads and maps book cover images and author photos.
-- **Synchronized Light/Dark Mode**: A persistent theme toggle across all application pages (`index.html` and `add_book.html`) utilizing client-side storage.
-- **Modern UI/UX**: Clean, card-based dashboard layout built with custom CSS variables.
-
----
-
-## 🛠️ Tech Stack
-
-- **Backend**: Python, Flask, MySQL Connector
-- **Database**: MySQL Server (Workbench)
-- **Frontend**: HTML5, CSS3, JavaScript
-
----
-
-## ⚙️ Setup and Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/Mohamed-052/database-Lab3.git](https://github.com/Mohamed-052/database-Lab3.git)
-   cd database-Lab3
+```text
+lab3/
+│
+├── Part1/                  # Database DDL, DML, and Lab Answers
+│   ├── problem1_Answers.txt
+│   ├── problem1_DDL.sql
+│   └── problem1_DML.sql
+│
+├── Part2/                  # Flask Web Application
+│   ├── static/             # Styles, uploads, and assets
+│   ├── templates/          # HTML Templates (index.html, add_book.html)
+│   ├── app.py              # Main Flask application file
+│   ├── problem2_DDL.sql
+│   └── problem2_DML.sql
+│
+└── README.md
