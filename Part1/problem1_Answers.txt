@@ -1,0 +1,18 @@
+Q1.1 Answer:
+SQL: DELETE FROM EMPLOYEE WHERE ssn = 103;
+Output/Error:MySQL Error (1451): Cannot delete or update a parent row: a foreign key constraint fails (`company`.`department`, CONSTRAINT `department_ibfk_1` FOREIGN KEY (`mgr_ssn`) REFERENCES `employee` (`ssn`))
+✕ SQL Script execution completed in 227ms. 2 statements executed, 1 error occurred.
+
+Q1.2 Answer:
+SQL: INSERT INTO PROJECT VALUES (40, 'Test Project', 'Alex', 99);
+Output/Error: Error Code: MySQL Error (1452): Cannot add or update a child row: a foreign key constraint fails (`company`.`project`, CONSTRAINT `project_ibfk_1` FOREIGN KEY (`Dno`) REFERENCES `department` (`Dnumber`))
+
+
+Q1.3 Answer:
+If both mgr_ssn and Dno are NOT NULL, a circular dependency occurs when inserting the very first row. 
+To solve this, we can temporarily disable foreign key checks using:
+SET foreign_key_checks = 0;
+... perform inserts ...
+SET foreign_key_checks = 1;
+Or allow NULL temporarily during creation/insertion phases as demonstrated in our scripts.
+
